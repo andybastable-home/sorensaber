@@ -1,0 +1,15 @@
+# Firmware temp file — written by the saber and should never be committed
+setting/config.tmp
+soren/setting/config.tmp
+factory-backup/setting/config.tmp
+
+# Windows
+Thumbs.db
+desktop.ini
+
+# macOS
+.DS_Store
+
+# Editor
+*.swp
+*~
