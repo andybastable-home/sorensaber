@@ -140,6 +140,8 @@ After normalising, verify: the output should read between -19 and -16 LUFS.
 | 13 | Vader           | Vader Hallway       | red         |
 | 14 | Windu           | Mace Windu          | purple      |
 | 15 | Yoda            | Yoda                | green       |
+| 16 | Ezra Bridger    | Ezra Bridger        | blue        |
+| 17 | Kanan Jarrus    | Kanan Jarrus        | blue        |
 
 `soren/_unused_chosen/` — the original empty `1/` folder (only had a "The Chosen" fontconfig.ini, no wavs). Kept as a safety preserve; can be deleted before copying to SD card (or just left — the board ignores non-numeric folders).
 
@@ -166,7 +168,7 @@ Top-level board settings: button count, blade pixel count, motion sensitivities,
 Always **diff before pushing**, and prefer pulling SD changes back into local when they're newer:
 
 ```bash
-cd /c/UnitySrc/git-personal/sorensaber/soren && for n in 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15; do
+cd /c/UnitySrc/git-personal/sorensaber/soren && for n in 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17; do
   local_cfg=$(cat "$n/fontconfig.ini" | tr -d '\r\n')
   sd_cfg=$(cat "/e/$n/fontconfig.ini" 2>/dev/null | tr -d '\r\n')
   if [ "$local_cfg" != "$sd_cfg" ]; then
